@@ -4,10 +4,13 @@
 
 int ver_area (int x0, int y0, int x1, int y1, int x2, int y2, int x3, int y3){
     
-  if (y2 > y1 || y3 < y0 || x3 < x0 || x2 > x1)
-    return 0;
-
-  else return 1;}
+  if (x2 >= x0 && x2 <= x1 && y2 >= y0 && y2 <= y1)
+      return 1;
+  else if (x0 >= x2 && x0 <= x3 && y0 >= y2 && y0 <=y1)
+      return 1;
+  else return 0;
+  
+  }
 
 int main () {
 
